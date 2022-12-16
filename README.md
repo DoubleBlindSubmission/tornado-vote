@@ -52,7 +52,7 @@ Since, the code has been modified, in particular the ERC20 token, a new security
 ### Deploy locally
 `nvm use v11.15.0`
 
-`npm run build:self`
+`npm build:self`
 
 `ganache-cli --mnemonic "sock work police cube fine clean early much picture scan foot sure" –networkId 1337`
 
@@ -76,19 +76,3 @@ register participants in participants.txt file and retain one token
 
 `./cli.js commit <your-note> -Vote yes -r <rpc-url>`
 
-## Performance
-
-
-Admin:
-Deployment: 169586(migrations) + 2438214(hasher) +1073293(verifier) + 1401907 (VoteToken)+ 3268450 (Tornado) =  8,351,450
-Registration:
-  - 21,000 (if address funding)
-  - Voter registration: 63,016
-
-Commit:
-  - Approve: 46,113
-  - Deposit: 1,006,314
-  - Commit to Vote: 344,032
-
-Vote:
- - Cast: 58,151
